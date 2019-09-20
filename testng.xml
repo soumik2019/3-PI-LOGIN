@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ccgui_test" parallel="tests" thread-count="3">
+<test name="ccgui_test_chrome" >
+  <parameter name="browser" value="Chrome" />
+ <classes>
+ <class name="Test.Sanity_test" />
+ </classes>
+ </test>
+ <test name="ccgui_test_ie">
+  <parameter name="browser" value="ie" />
+ <classes>
+ <class name="Test.Sanity_test" />
+ </classes>
+ </test>
+ <test name="ccgui_test_firefox">
+  <parameter name="browser" value="firefox" />
+ <classes>
+ <class name="Test.Sanity_test" />
+ </classes>
+ </test>
+ </suite>
+ <suite name="test">
+<test name="tetsNGtest">
+<groups>
+<run>
+<exclude name="Mango"/><include name="Apple"/>
+</run>
+</groups>
+<classes>
+<class name="Test.testNGtest">
+</classes>
+ </test>
+</suite>

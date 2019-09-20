@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [ccgui_test]" parallel="tests">
+  <test thread-count="3" name="ccgui_test_firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="Test.Sanity_test">
+        <methods>
+          <include name="getResult"/>
+          <include name="beforeTest"/>
+          <include name="openCCGUI"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Test.Sanity_test -->
+    </classes>
+  </test> <!-- ccgui_test_firefox(failed) -->
+  <test thread-count="3" name="ccgui_test_ie(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="Test.Sanity_test">
+        <methods>
+          <include name="getResult"/>
+          <include name="beforeTest"/>
+          <include name="openCCGUI"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Test.Sanity_test -->
+    </classes>
+  </test> <!-- ccgui_test_ie(failed) -->
+</suite> <!-- Failed suite [ccgui_test] -->
